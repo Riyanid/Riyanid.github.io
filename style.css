@@ -238,6 +238,51 @@ body{
   font-size: 1em;
 }
 
+
+.donasi .content{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.donasi .content .col-left{
+  position: relative;
+  width: 45%;
+}
+
+.donasi .content .col-right{
+  position: relative;
+  width: 50%;
+}
+
+.donasi .content .col-left .img-card{
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+}
+
+.donasi .content .col-left .img-card img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.donasi .content .col-right .content-title{
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.donasi .content .col-right .paragraph-text{
+  font-size: 1em;
+}
+
 .skills{
   background: #000016;
 }
@@ -588,7 +633,7 @@ body{
 
   .menu-btn{
     position: absolute;
-    background: url(images/menu.png)no-repeat;
+    background: url(images/menu.gif)no-repeat;
     background-size: 30px;
     background-position: center;
     width: 40px;
@@ -601,7 +646,7 @@ body{
 
   .menu-btn.active{
     z-index: 999;
-    background: url(images/close.png)no-repeat;
+    background: url(images/close.gif)no-repeat;
     background-size: 25px;
     background-position: center;
     transition: 0.3s ease;
@@ -624,7 +669,7 @@ body{
     font-size: 1.8em;
   }
 
-  .about .content{
+.about .content{
     flex-direction: column;
   }
 
@@ -634,6 +679,20 @@ body{
   }
 
   .about .content .col-right{
+    margin-top: 40px;
+  }    
+  
+
+  .donasi .content{
+    flex-direction: column;
+  }
+
+  .donasi .content .column{
+    position: relative;
+    width: 100%;
+  }
+
+  .donasi .content .col-right{
     margin-top: 40px;
   }
 
