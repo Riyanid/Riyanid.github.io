@@ -139,7 +139,7 @@
         </div>
       </div>
     </section>
-    
+ 
          <section class="jadwal" id="jadwal">
      <div class="title reveal">
         <h2 class="section-title">JADWAL SHOLAT</h2>
@@ -193,26 +193,88 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="contact-form reveal">
-            <h3>Send Message</h3>
-            <div class="input-box">
-              <input type="text" name="" value="" placeholder="Name">
-            </div>
-            <div class="input-box">
-              <input type="text" name="" value="" placeholder="Email">
-            </div>
-            <div class="input-box">
-              <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
-            </div>
-            <div class="input-box">
-              <input type="submit" class="send-btn" name="" value="Send">
-            </div>
-          </div>
+        
+    
+      <div class="row">
+    <h2>Membuat Contact Form Sederhana Dengan PHP</h2>
+        <?php if(!empty($statusMsg)){ ?>
+  <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
+        <?php } ?>
+        <form action="upload.php" method="post">
+        <table border="0">
+        <tr>
+        <td>Nama</td>
+        <td><input type="text" name="name" placeholder="Masukkan Nama Anda" required=""></td>
+        </tr>
+        <tr>
+        <td>Email</td>
+        <td><input type="email" name="email" placeholder="Alamat Email Anda" required=""></td>
+        </tr>
+        <tr>
+        <td>Subject</td>
+        <td><input type="text" name="subject" placeholder="Tulis subject" required=""></td>
+        </tr>
+        <tr>
+        <td>Message</td>
+        <td><textarea name="message" placeholder="Tulis pesan Anda disini" required=""> </textarea></td>
+        </tr>
+        <tr>
+        <td><input type="submit" name="submit" value="KIRIM"></td>
+        </tr>
+        </table>
+        </form>
         </div>
-      </div>
-    </section>
- 
+    
+    <style type="text/css" scoped="scoped">
+#bulanramadhan2020 
+    {
+        background:#007FFF;
+        color:#f1c40f;
+        font-family:'Roboto', Arial, Sans-serif;
+        font-size:20px;
+        text-align:center;
+        padding:10px 0;
+        font-weight:normal;
+    }
+.teks
+    {
+        color:white
+    }
+</style>
+
+<div id="bulanramadhan2020">
+    <span id="countdown"></span>
+</div>
+<script type='text/javascript'>
+    //<![CDATA[
+    // set the date we're counting down to
+    var target_date = new Date("May, 03, 2022").getTime();
+    // variables for time units
+    var days, hours, minutes, seconds;
+    // get tag element
+    var countdown = document.getElementById("countdown");
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+        // do some time calculations
+        days = parseInt(seconds_left / 86400);
+        seconds_left = seconds_left % 86400;
+
+        hours = parseInt(seconds_left / 3600);
+        seconds_left = seconds_left % 3600;
+
+        minutes = parseInt(seconds_left / 60);
+        seconds = parseInt(seconds_left % 60);
+
+        // format countdown string + set tag value
+      countdown.innerHTML = days + " <span class=\'teks\'>Hari</span> " + hours + " <span class=\'teks\'>jam</span> "
+      + minutes + " <span class=\'teks\'>menit</span> " + seconds + " <span class=\'teks\'>detik menuju hari raya idul fitri</span> 1443 H/2022";
+    }, 1000);
+    //]]>
+</script>
+     
      <footer class="footer">
       <span class="footer-title">PERSONAL WEBSITE</span>
       <p>Copyright @2022 | By <a href="#">Ryanada</a>.</p>
