@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
             $msgClassk = 'errordiv';
         }else{
             // Pengaturan penerima email dan subjek email
-            $toEmail = 'riyanriyanr84@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
+            $toEmail = 'sadikaja18@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
             $emailSubject = 'Pesan website dari '.$name;
             $htmlContent = '<h2> via Form Kontak Website</h2>
                 <h4>Name</h4><p>'.$name.'</p>
